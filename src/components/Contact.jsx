@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <form action="">
+    <form action="" id="contactForm">
+        <img src="./ships/redForce.jpeg" alt="yomifruit" />
         <label htmlFor="">First Name</label>
         <input type="text" placeholder='Your first name...' />
         <label htmlFor="">Last Name</label>

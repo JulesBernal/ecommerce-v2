@@ -1,7 +1,10 @@
 import React from 'react'
+import Products from './Products'
 
 export default function Shop() {
   return (
-    <div>Shop</div>
+    <div>Shop
+      <Products />
+    </div>
   )
 }

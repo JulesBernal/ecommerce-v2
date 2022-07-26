@@ -5,8 +5,15 @@ import Footer from './components/Footer';
 import Splash from './components/Splash';
 import Shop from './components/Shop';
 import Contact from './components/Contact'
-
+import React from 'react';
 function App() {
+  // const [data, setData] = React.useState(null);
+
+  // React.useEffect(() => {
+  //   fetch("/shoplow")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data.message));
+  // }, []);
   return (
     <div className="App">
     <Router>
