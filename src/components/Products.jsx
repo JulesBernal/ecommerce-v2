@@ -10,14 +10,14 @@ export default function Products() {
 
   const onSubmit = formData => {
       console.log(formData);
-    axios.post("http://localhost:3000/test",formData)
+    axios.post("https://onepieceecommercebackend.herokuapp.com/test",formData)
       .then(response=>{
         console.log(response.data);
         setFruitData(response.data);
       })
   };
   function getRequest(){
-    axios.get("http://localhost:3000/shoplow",{crossdomain: true})
+    axios.get("https://onepieceecommercebackend.herokuapp.com/shoplow",{crossdomain: true})
       .then(response=>{
         setFruitData(response.data);
       })
