@@ -5,7 +5,6 @@ const PORT = process.env.PORT || 3000;
 const path = require('path');
 const cors = require('cors');
 
-require("dotenv").config();
 const app = express();
 const SQL_PORT=process.env.SQL_PORT;
 const SQL_PASSWORD=process.env.SQL_PASSWORD;
