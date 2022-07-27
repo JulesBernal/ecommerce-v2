@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.resolve(__dirname, 'build')));
 app.use(bodyParser.urlencoded({extended:true}));
 
 const connection = mysql.createConnection({
