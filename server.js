@@ -27,9 +27,9 @@ const connection = mysql.createConnection({
     database: 'ecommerce'
 });
 
-// app.get('/*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 app.get('/shoplow',(req,res)=>{
     console.log('initial shop');
     connection.query('SELECT * FROM products',function(error,results,fields){
