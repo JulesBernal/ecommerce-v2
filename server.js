@@ -55,7 +55,7 @@ app.post('/test/',(req,res)=>{
     })
 })
 app.get('/shophigh',(req,res)=>{
-    console.log('initial shop');
+    console.log('second shop');
     connection.query('SELECT * FROM smiles',function(error,results,fields){
         if (error) throw error;
         console.log('request sent');
