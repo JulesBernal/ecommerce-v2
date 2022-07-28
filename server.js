@@ -54,6 +54,14 @@ app.post('/test/',(req,res)=>{
         res.send(results)
     })
 })
+app.get('/shophigh',(req,res)=>{
+    console.log('initial shop');
+    connection.query('SELECT * FROM smiles',function(error,results,fields){
+        if (error) throw error;
+        console.log('request sent');
+        res.send(results);
+    })
+})
 app.listen(PORT,() =>{
     console.log(`Listening to port ${PORT}`);
 });
