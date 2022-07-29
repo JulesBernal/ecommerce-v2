@@ -158,7 +158,16 @@ input[type=text],textarea{
   // margin:auto;
   box-sizing: border-box;
 }
-#cartThing{
+.cartThing{
   display:flex;
   flex-direction: row;
+  margin:auto;
+  justify-content: space-around;
+  *{
+    margin-top:auto;
+    margin-bottom: auto;
+  }
+  img{
+    height:200px;
+  }
 }

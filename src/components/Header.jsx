@@ -27,6 +27,13 @@ export default function Header(props) {
                 isActive ? activeStyle:undefined}
               >Shop
             </NavLink>
+          </li><li>
+            <NavLink
+              to='/cart'
+              style={({ isActive })=>
+                isActive ? activeStyle:undefined}
+              >Cart
+            </NavLink>
           </li>
           <li>
             <NavLink

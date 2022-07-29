@@ -19,12 +19,13 @@ function App() {
     <main className="App">
     <Router>
       <Header data={toggled}/>
-      {/* <Cart data={shopCart}/> */}
       <article>
       <Routes>
         <Route path='/' element={<Splash sheep={toggled}/>}/>
         <Route path='/shop' element={<Shop sheep={toggled} cat={[shopCart,setShopCart]}/>}/>
+        <Route path='/cart' element={<Cart sheep={toggled} data={shopCart}/>}/>
         <Route path='/contact' element={<Contact sheep={toggled}/>}/>
+        {/* <Route path='/cart' element={<Contact sheep={toggled}/>}/> */}
       </Routes>
       </article>
       <Footer data={toggled}/>

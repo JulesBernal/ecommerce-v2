@@ -4,10 +4,7 @@ export default function Product(props) {
   const fruitData=props.data;
   const alt=`Photo of ${fruitData.title} fruit from One Piece`
   const addCart = () =>{
-    if(props.dog[0]){
-      props.dog[1](true)
-    }
-    // ? props.dog[1](false): props.dog[1](true);
+      props.dog[1](current => [...current,fruitData]);
   }
   return (
     <figure className="fruit">
