@@ -19,10 +19,10 @@ export default function Products(props) {
   };
   useEffect(() =>{
     const fetchData = async() =>{
-      const result = props.chicken ?  getRequest("high") : getRequest("low");
+      props.chicken ?  getRequest("high") : getRequest("low");
     };
     fetchData();
-  },[]);
+  },[props.chicken]);
   const formDisable = props.chicken ? <input type="submit" disabled/> : <input type="submit" />; 
   return (  
     <section>
@@ -49,7 +49,6 @@ export default function Products(props) {
             )
           }
         )
-        
       }
       </article>
     </section>

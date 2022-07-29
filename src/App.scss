@@ -19,7 +19,16 @@ body{
   flex-wrap:wrap;
 }
 #contactFlex{
-  flex-wrap: nowrap;
+  display:flex;
+  flex-direction: column;
+  // margin: 1rem;
+  margin:auto ;
+  background: rgba(245, 245, 220, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(245, 245, 220, 0.8);
 }
 .fruit img{
   object-fit:contain;
@@ -37,6 +46,7 @@ body{
   height:400px;
   width:300px;
   margin:20px;
+  background:beige;
 }
 ul{
 list-style-type:none;
@@ -97,6 +107,7 @@ footer p,a{
 }
 #redShip{
   height:50vh;
+  margin:auto;
 }
 
 #slideBox{
@@ -124,11 +135,13 @@ footer p,a{
   margin-left:auto;
   margin-right:auto;}
 #contactForm{
+  display:flex;
+  flex-direction: column;
   border-radius:5px;
   padding:10px;
   height:50vh;
   width:50%;
-  background-color:grey;
+  margin:auto;
 }
 input[type=text],textarea{
   box-sizing:border-box;
@@ -140,4 +153,12 @@ input[type=text],textarea{
 .theme{
     background-color: #dfb4c5;
   // color:#dfb4c5
+}
+#contactContact{
+  // margin:auto;
+  box-sizing: border-box;
+}
+#cartThing{
+  display:flex;
+  flex-direction: row;
 }
