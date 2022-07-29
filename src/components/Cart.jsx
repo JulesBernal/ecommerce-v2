@@ -4,7 +4,8 @@ export default function Cart(props) {
    
   return (
     <div>
-        {props.Cat[0].map((fruit) =>
+        <h2>Items in your Shopping Cart</h2>
+        {props.data[0].map((fruit) =>
           {
             return(
                 <section id="cartThing">

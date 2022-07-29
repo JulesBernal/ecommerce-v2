@@ -23,6 +23,7 @@ export default function Products(props) {
     };
     fetchData();
   },[props.chicken]);
+  // console.log(props.cat)
   const formDisable = props.chicken ? <input type="submit" disabled/> : <input type="submit" />; 
   return (  
     <section>
@@ -45,7 +46,7 @@ export default function Products(props) {
         fruitData.map((fruit) =>
           {
             return(
-              <Product data={fruit} />
+              <Product data={fruit} dog={props.cricket}/>
             )
           }
         )

@@ -11,6 +11,7 @@ import Cart from './components/Cart';
 function App() {
   const [toggled,setToggled] = useState("");
   const [shopCart,setShopCart] = useState("");
+  console.log(shopCart)
   document.body.style.backgroundColor='#a72f58';
   document.body.style.textAlign='center';
   document.body.style.backgroundImage = toggled ? "none" : 'url("./fruits/paperBG.webp")';
