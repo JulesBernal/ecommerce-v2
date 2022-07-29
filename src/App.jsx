@@ -12,19 +12,18 @@ function App() {
   const [toggled,setToggled] = useState("");
   const [shopCart,setShopCart] = useState("");
   const [total,setTotal] = useState(0);
-  // const something  = () = shopCart ? shopCart.map((fruit) => { setTotal(total + parseFloat(fruit.price))}) : '0';
   document.body.style.backgroundColor='#a72f58';
   document.body.style.textAlign='center';
   document.body.style.backgroundImage = toggled ? "none" : 'url("./fruits/paperBG.webp")';
   return (
     <main className="App">
     <Router>
-      <Header data={toggled}/>
+      <Header data={toggled} leemur={shopCart}/>
       <article>
       <Routes>
         <Route path='/' element={<Splash sheep={toggled}/>}/>
-        <Route path='/shop' element={<Shop sheep={toggled} cat={[shopCart,setShopCart]}/>}/>
-        <Route path='/cart' element={<Cart sheep={toggled} data={shopCart} val={total}/>}/>
+        <Route path='/shop' element={<Shop sheep={toggled} cat={[shopCart,setShopCart]} horse={[total,setTotal]}/>}/>
+        <Route path='/cart' element={<Cart sheep={toggled} data={shopCart} val={total} work={[setShopCart,setTotal]} /> }/>
         <Route path='/contact' element={<Contact sheep={toggled}/>}/>
       </Routes>
       </article>

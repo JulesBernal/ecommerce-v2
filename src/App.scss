@@ -89,7 +89,7 @@ a:hover:not(.active){
 @media only screen and (max-width: 800px) {
   .fruit {width: 50%;height:50vh;margin:auto;}
   .fruit img{height:60%;}
-  li{width:33%}
+  li{width:25%}
   header{margin-bottom:10px;}
   #contactFlex{flex-wrap:wrap;}
   #slideBox{width:100vw;height:30vh;}
@@ -174,6 +174,12 @@ input[type=text],textarea{
   flex-direction: row;
   margin:auto;
   justify-content: space-around;
+  background: rgba(245, 245, 220, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(245, 245, 220, 0.8);
   *{
     margin-top:auto;
     margin-bottom: auto;

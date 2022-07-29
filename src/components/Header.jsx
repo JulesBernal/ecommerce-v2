@@ -32,7 +32,7 @@ export default function Header(props) {
               to='/cart'
               style={({ isActive })=>
                 isActive ? activeStyle:undefined}
-              >Cart
+              >Cart {props.leemur.length}
             </NavLink>
           </li>
           <li>

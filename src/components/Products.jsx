@@ -43,11 +43,11 @@ export default function Products(props) {
         {formDisable}
       </form>
       <article className="art1 art">
-      {
+      { 
         fruitData.map((fruit) =>
           {
             return(
-              <Product data={fruit} dog={props.cricket} coin={currency}/>
+              <Product data={fruit} dog={props.cricket} coin={currency} rat={props.val}/>
             )
           }
         )

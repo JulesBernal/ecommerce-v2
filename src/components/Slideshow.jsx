@@ -13,7 +13,6 @@ export default function Slideshow(props) {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
-  console.log(props.cat)
   return (
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect} interval={5000}>
