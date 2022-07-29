@@ -62,6 +62,10 @@ app.get('/shophigh',(req,res)=>{
         res.send(results);
     })
 })
+app.get('/ping',(req,res)=>{
+    console.log('ping');
+})
+
 app.listen(PORT,() =>{
     console.log(`Listening to port ${PORT}`);
 });
