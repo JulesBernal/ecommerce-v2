@@ -2,7 +2,7 @@ body{
   background-image:url(../public/fruits/paperBG.webp);
   display:block;
   padding: 8px 0 0 0;
-  background-color: #FCF5E5;
+  background-color: #a72f58;
   margin:0;
   text-align:center;
 }
@@ -136,4 +136,8 @@ input[type=text],textarea{
   padding:0 0 10px;
   margin:auto;
   resize:vertical;
+}
+.theme{
+    background-color: #dfb4c5;
+  // color:#dfb4c5
 }

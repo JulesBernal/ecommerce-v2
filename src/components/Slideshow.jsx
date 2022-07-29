@@ -19,21 +19,21 @@ export default function Slideshow() {
   });
   return (
     <div>Slideshow
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img class ="slideFig" src="ships/galley.webp" alt="Galley-La Ship from One Piece"/></div>
-          <div class="swiper-slide">
-            <img class ="slideFig" src="fruits/devilFruit.webp" alt="An assortment of Devil fruit from One Piece"/></div>
-          <div class="swiper-slide">
-            <img class ="slideFig" src="ships/yontamaria.webp" alt="Yonta Maria Ship from One Piece"/></div>
-          <div class="swiper-slide">
-            <img class ="slideFig" src="ships/treasure.jpg" alt="Treasure from One Piece"/></div>
+      <div className="swiper">
+        <div className="swiper-wrapper">
+          <div className="swiper-slide">
+            <img className ="slideFig" src="ships/galley.webp" alt="Galley-La Ship from One Piece"/></div>
+          <div className="swiper-slide">
+            <img className ="slideFig" src="fruits/devilFruit.webp" alt="An assortment of Devil fruit from One Piece"/></div>
+          <div className="swiper-slide">
+            <img className ="slideFig" src="ships/yontamaria.webp" alt="Yonta Maria Ship from One Piece"/></div>
+          <div className="swiper-slide">
+            <img className ="slideFig" src="ships/treasure.jpg" alt="Treasure from One Piece"/></div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-scrollbar"></div>
       </div>
     </div>
   )

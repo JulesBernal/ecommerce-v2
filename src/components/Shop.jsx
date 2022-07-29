@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Products from './Products'
 
-export default function Shop() {
+export default function Shop(props) {
   return (
     <div>Shop
-      <Products />
+      <Products key={props.sheep ? "1" : "2"} chicken={props.sheep} />
     </div>
   )
 }

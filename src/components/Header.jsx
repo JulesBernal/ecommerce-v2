@@ -1,16 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 // import './Navbar.scss'
-export default function Header() {
+export default function Header(props) {
   let activeStyle={
     textDecoration:"underline",
     background:"#00ffff",
     color:"#5600ef"
 };
+// console.log(props.data)
   return (
     <header>
       <nav>
-        <ul>
+        <ul className={props.data ? 'theme' : '' } >
           <li>
             <NavLink
               to='/'

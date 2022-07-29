@@ -2,34 +2,28 @@ import React, {useState,useEffect} from 'react'
 import Product from './Product'
 import axios from 'axios'
 import { useForm } from 'react-hook-form';
-export default function Products() {
-  
+export default function Products(props) {
   const { register, handleSubmit} = useForm();
   const [fruitData,setFruitData] = useState([]);
-  // const [inputValue,setInputValue]= useState("");
-
   const onSubmit = formData => {
-      console.log(formData);
     axios.post("https://onepieceecommercebackend.herokuapp.com/test",formData)
       .then(response=>{
-        console.log(response.data);
         setFruitData(response.data);
       })
   };
-  function getRequest(){
-    axios.get("https://onepieceecommercebackend.herokuapp.com/shoplow",{crossdomain: true})
+  function getRequest(str){
+    axios.get(`https://onepieceecommercebackend.herokuapp.com/shop${str}`,{crossdomain: true})
       .then(response=>{
         setFruitData(response.data);
       })
   };
   useEffect(() =>{
     const fetchData = async() =>{
-      const result = getRequest();
-      // setFruitData(result.data);
-      // console.log(result);
+      const result = props.chicken ?  getRequest("high") : getRequest("low");
     };
     fetchData();
   },[]);
+  const formDisable = props.chicken ? <input type="submit" disabled/> : <input type="submit" />; 
   return (  
     <section>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -44,14 +38,14 @@ export default function Products() {
           <option value="ASC">Lowest to Highest</option>
           <option value="DESC">Highest to Lowest</option>
         </select>
-        <input type="submit"/>
+        {formDisable}
       </form>
       <article className="art1 art">
       {
         fruitData.map((fruit) =>
           {
             return(
-              <Product data={fruit}/>
+              <Product data={fruit} />
             )
           }
         )
