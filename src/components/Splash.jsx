@@ -1,10 +1,10 @@
 import React from 'react'
 import Slideshow from './Slideshow'
 // import Thingie from 'Thingie'
-export default function Splash() {
+export default function Splash(props) {
   return (
     <section>
-        <Slideshow />
+        <Slideshow cat={props.sheep}/>
         <h2>We here provide a variety of devil fruits fresh to eat, to trade, or to display.</h2>
         <h3>You want powerful strong devil fruits? Beautiful and serene devil fruits?
         How about discreet and sneaky ones, we got them too!</h3>

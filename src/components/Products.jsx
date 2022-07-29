@@ -2,8 +2,10 @@ import React, {useState,useEffect} from 'react'
 import Product from './Product'
 import axios from 'axios'
 import { useForm } from 'react-hook-form';
+import Money from './Money';
 export default function Products(props) {
   const { register, handleSubmit} = useForm();
+  const [ currency, setCurrency] = useState("");
   const [fruitData,setFruitData] = useState([]);
   const onSubmit = formData => {
     axios.post("https://onepieceecommercebackend.herokuapp.com/test",formData)
@@ -23,8 +25,7 @@ export default function Products(props) {
     };
     fetchData();
   },[props.chicken]);
-  // console.log(props.cat)
-  const formDisable = props.chicken ? <input type="submit" disabled/> : <input type="submit" />; 
+  const formDisable = props.chicken ? <input type="submit" value="search" disabled/> : <input type="submit" value="search"/>; 
   return (  
     <section>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -46,12 +47,13 @@ export default function Products(props) {
         fruitData.map((fruit) =>
           {
             return(
-              <Product data={fruit} dog={props.cricket}/>
+              <Product data={fruit} dog={props.cricket} coin={currency}/>
             )
           }
         )
       }
       </article>
+      <Money coin={setCurrency}/>
     </section>
   )
 }

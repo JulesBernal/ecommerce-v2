@@ -21,7 +21,7 @@ body{
 #contactFlex{
   display:flex;
   flex-direction: column;
-  // margin: 1rem;
+  max-width: 680px;
   margin:auto ;
   background: rgba(245, 245, 220, 0.22);
   border-radius: 16px;
@@ -29,6 +29,9 @@ body{
   backdrop-filter: blur(6.7px);
   -webkit-backdrop-filter: blur(6.7px);
   border: 1px solid rgba(245, 245, 220, 0.8);
+  form{
+    width:98%;
+  }
 }
 .fruit img{
   object-fit:contain;
@@ -43,10 +46,14 @@ body{
   margin:0;
 }
 .fruit{
+  display:flex;
+  flex-direction: column;
   height:400px;
   width:300px;
   margin:20px;
+  padding:0;
   background:beige;
+  
 }
 ul{
 list-style-type:none;
@@ -80,27 +87,31 @@ a:hover:not(.active){
   background-color:skyblue;
 }
 @media only screen and (max-width: 800px) {
-.fruit {width: 50%;height:50vh;margin:auto;}
-.fruit img{height:60%;}
-li{width:33%}
-header{margin-bottom:10px;}
-#contactFlex{flex-wrap:wrap;}
-#slideBox{width:100vw;height:30vh;}
-.slideFig{width:100%;}
+  .fruit {width: 50%;height:50vh;margin:auto;}
+  .fruit img{height:60%;}
+  li{width:33%}
+  header{margin-bottom:10px;}
+  #contactFlex{flex-wrap:wrap;}
+  #slideBox{width:100vw;height:30vh;}
+  .slideFig{width:100%;}
+  footer{flex-direction: column;}
 } 
 
 footer {
   display:flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
     background-color:orange;
     margin:0px;
-    height:30px;
+    height:45px;
     text-align:center;
     padding:10px 0 0 0;
 }
-footer p,a{
-  margin: auto 1rem auto 1rem;
+#footerSec{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width:30%;
 }
 #openText{
   padding:0 0 0 10px;

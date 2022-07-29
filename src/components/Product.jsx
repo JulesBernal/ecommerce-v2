@@ -6,13 +6,14 @@ export default function Product(props) {
   const addCart = () =>{
       props.dog[1](current => [...current,fruitData]);
   }
+  const price = parseFloat(fruitData.price) * props.coin
   return (
     <figure className="fruit">
         <p>{fruitData.fruit_type}</p>
         <img src={fruitData.img} alt={alt}/>
         <p>{fruitData.title} Fruit</p>
         <p>{fruitData.description}</p>
-        <p>USD ${fruitData.price}</p>
+        <p>USD ${price ? price : fruitData.price}</p>
         <button onClick={addCart}>Buy</button>
     </figure>
   )
