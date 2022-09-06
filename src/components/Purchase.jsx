@@ -7,7 +7,7 @@ export default function Purchase(props) {
         //     setFruitData(response.data);
         //   })
         props.bike[0]('');
-        props.bike[1]('');
+        props.bike[1](0);
         alert('Purchase successful!')
       };
   return (

@@ -68,3 +68,24 @@ app.get('/shophigh',(req,res)=>{
 app.listen(PORT,() =>{
     console.log(`Listening to port ${PORT}`);
 });
+
+
+const { CourierClient } =require("@trycourier/courier");
+      
+      const courier = CourierClient(
+        { authorizationToken: "pk_prod_8VSRGYTM20MW36QKBARZ8TPAA505"});
+      
+      const { requestId } = async courier.send({
+        message: {
+          content: {
+            title: "Welcome to Courier!",
+            body: "Want to hear a joke? {{joke}}"
+          },
+          data: {
+            joke: "Why was the JavaScript developer sad? Because they didn't Node how to Express themselves"
+          },
+          to: {
+            email: "julian.bernal.tt@gmail.com"
+          }
+        }
+      });

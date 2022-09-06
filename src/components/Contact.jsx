@@ -16,8 +16,7 @@ export default function Contact(props) {
     <article id="contactContact">
         <section id ="contactFlex" >
         {formContact}
-        <form id="contactForm" onSubmit={handleSubmit(onSubmit)} method="POST" >
-        
+        <form id="contactForm" onSubmit={() => handleSubmit(onSubmit)}  >
           <label htmlFor="">First Name</label>
           <input type="text" {...register("fName")} placeholder='Your first name...' Required/>
           <label htmlFor="">Last Name</label>

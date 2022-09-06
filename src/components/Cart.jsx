@@ -1,11 +1,7 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Purchase from './Purchase';
 export default function Cart(props) {
-    const [baseball,setBaseBall]=useState();
-    // const addCart = () =>{
-    //     props.dog[1](current => [...current,fruitData]);
-    //     props.rat[1](props.rat[0]+parseFloat(fruitData.price));
-    // }
+    
     function removeItem (fruit){
         props.work[0](props.data.filter(item=>item !==fruit))
         props.work[1](props.val - fruit.price);

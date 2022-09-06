@@ -1,18 +1,24 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
+import axios from 'axios';
 export default function Slideshow(props) {
 
   const [index, setIndex] = useState(0);
-
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  useEffect(() =>{
+    const fetchData = async() =>{
+      axios.get(`https://onepieceecommercebackend.herokuapp.com/`,{crossdomain: true})
+      .then(response=>{
+        console.log('loading done');
+      })
+    };
+    fetchData();
+  },[]);
+
   return (
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect} interval={5000}>
