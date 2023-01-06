@@ -8,13 +8,13 @@ export default function Products(props) {
   const [ currency, setCurrency] = useState("");
   const [fruitData,setFruitData] = useState([]);
   const onSubmit = formData => {
-    axios.post("https://onepieceecommercebackend.herokuapp.com/test",formData)
+    axios.post("https://ecommerce-v2-red.vercel.app/test",formData)
       .then(response=>{
         setFruitData(response.data);
       })
   };
   function getRequest(str){
-    axios.get(`https://onepieceecommercebackend.herokuapp.com/shop${str}`,{crossdomain: true})
+    axios.get(`https://ecommerce-v2-red.vercel.app/shop${str}`,{crossdomain: true})
       .then(response=>{
         setFruitData(response.data);
       })

@@ -11,7 +11,7 @@ export default function Slideshow(props) {
 
   useEffect(() =>{
     const fetchData = async() =>{
-      axios.get(`https://onepieceecommercebackend.herokuapp.com/`,{crossdomain: true})
+      axios.get(`https://ecommerce-v2-red.vercel.app/`,{crossdomain: true})
       .then(response=>{
         console.log('loading done');
       })
